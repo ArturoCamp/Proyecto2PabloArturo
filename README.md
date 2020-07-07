@@ -66,3 +66,11 @@ Cliente envía archivos al servidor.
 -java jdk8
 
 -sqljdbc41.jar
+
+# Páginas utilizadas 
+
+https://www.youtube.com/watch?v=IMMebNpmSXM&feature=youtu.be
+
+http://www.geocities.ws/programmiersprache/envioarchivo.html
+
+https://www.campusmvp.es/recursos/post/java-como-listar-filtrar-y-obtener-informacion-de-carpetas-y-archivos.aspx
