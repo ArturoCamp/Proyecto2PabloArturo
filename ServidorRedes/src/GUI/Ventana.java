@@ -9,13 +9,21 @@ import Data.connection;
 import Domain.Usuarios;
 import java.io.File;
 import java.io.IOException;
+import java.io.UnsupportedEncodingException;
+import java.security.MessageDigest;
 import java.sql.CallableStatement;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Base64;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.crypto.Cipher;
+import javax.crypto.IllegalBlockSizeException;
+import javax.crypto.SecretKey;
+import javax.crypto.spec.SecretKeySpec;
 import javax.swing.JOptionPane;
 
 /**
@@ -272,6 +280,46 @@ public class Ventana extends javax.swing.JFrame {
 //            System.out.println("Disconnected");
     }//GEN-LAST:event_jButton1ActionPerformed
 
+//    public static String Encriptar(String texto) {
+//
+//        String secretKey = "qualityinfosolutions"; //llave para encriptar datos
+//        String base64EncryptedString = "";
+//
+//        try {
+//
+//            MessageDigest md = MessageDigest.getInstance("MD5");
+//            byte[] digestOfPassword = md.digest(secretKey.getBytes("utf-8"));
+//            byte[] keyBytes = Arrays.copyOf(digestOfPassword, 24);
+//
+//            SecretKey key = new SecretKeySpec(keyBytes, "DESede");
+//            Cipher cipher = Cipher.getInstance("DESede");
+//            cipher.init(Cipher.ENCRYPT_MODE, key);
+//
+//            byte[] plainTextBytes = texto.getBytes("utf-8");
+//            byte[] buf = cipher.doFinal(plainTextBytes);
+//            byte[] base64Bytes = Base64.encodeBase64(buf);
+//            base64EncryptedString = new String(base64Bytes);
+//
+//        } catch (Exception ex) {
+//        }
+//        return base64EncryptedString;
+//}
+    
+//      public String encrypt(String str) {
+//           try {
+//               // Encode the string into bytes using utf-8
+//               byte[] utf8 = str.getBytes("UTF8");
+//
+//               // Encrypt
+//               byte[] enc = ecipher.doFinal(utf8);
+//
+//               // Encode bytes to base64 to get a string
+//               return new sun.misc.BASE64Encoder().encode(enc);
+//           } catch (UnsupportedEncodingException e) {
+//           } catch (java.io.IOException e) {
+//           }
+//           return null;
+//       }
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField1ActionPerformed
